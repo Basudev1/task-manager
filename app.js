@@ -6,6 +6,7 @@ require('dotenv').config();
 const port = 3000;
 
 //express middleware
+app.use(express.static('./public'));
 
 app.use(express.json());
 
