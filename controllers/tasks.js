@@ -18,7 +18,9 @@ const getTask = async (req, res) => {
       return res.status(404).json({ msg: `No Task with ID ${taskID}` });
     }
 
-    res.status(200).json({ task });
+    // res.status(200).json({ task });
+    // res.status(200).json({ task, amount: task.length });
+    res.status(200).json({ success:"success",data:{task, amount: task.length}  });
   } catch (error) {
     res.status(500).json({ msg: error });
   }
